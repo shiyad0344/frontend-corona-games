@@ -1,0 +1,507 @@
+@media (min-width: 768px) {
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    margin: 0;
+    overflow-y: hidden;
+    position: fixed;
+  }
+
+  .wrap {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  img {
+    display: none;
+  }
+
+  .finalscore {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .invisible {
+    visibility: hidden;
+  }
+
+  .sidebar {
+    position: fixed;
+    left: -400px;
+    ;
+    width: 400px;
+    height: 100%;
+    background: #111111;
+    transition: 0.5s ease;
+  }
+
+  .sidebar header {
+    padding: 10px;
+    line-height: 65px;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    background: #1779ff;
+    user-select: none;
+  }
+
+  .sidebar ol {
+    margin: 0;
+    list-style-type: none;
+  }
+
+  .sidebar a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+    padding-left: 15px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .sidebar a:hover {
+    color: #1779ff;
+    padding-left: 20px;
+    transition: 0.5s;
+  }
+
+  .line {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+  }
+
+  .hamburger {
+    position: fixed;
+    margin: 25px;
+  }
+
+  .scorepanel {
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: white;
+    user-select: none;
+  }
+
+  .scorecard {
+    color: white;
+    background: black;
+    font-family: 'Poppins', sans-serif;
+    padding: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-style: none;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    word-wrap: break-word;
+    width: 30%;
+    overflow: hidden;
+  }
+
+  .scorecard ::before {
+    content: '';
+    background: rgba(255, 255, 255, 0.03);
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    bottom: 2px;
+    width: 50%;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .scorecard .content {
+    padding: 30px;
+    text-align: center;
+  }
+
+  .scorecard .content h1 {
+    color: #1779ff;
+    font-size: 2.5rem;
+    margin: 0;
+    z-index: 2;
+  }
+
+  .scorecard .content h2 {
+    margin-bottom: 0;
+  }
+
+  .scorecard .content a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    background: #aaaaaa;
+    color: #0c002b;
+    text-decoration: none;
+    opacity: 1;
+  }
+
+  .scorecard .content a:hover {
+    color: #000000;
+    background: white;
+  }
+
+  .scorecard .content p {
+    padding: 25px;
+    margin: 0;
+  }
+
+  .scorecard span {
+    transition: 0.5;
+  }
+
+  .scorecard span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, transparent, #1779ff);
+    animation: animate1 2s linear infinite;
+  }
+
+  @keyframes animate1 {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .scorecard span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #1779ff);
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+  }
+
+  @keyframes animate2 {
+    0% {
+      transform: translateY(-100%);
+    }
+
+    100% {
+      transform: translateY(100%);
+    }
+  }
+
+  .scorecard span:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to left, transparent, #1779ff);
+    animation: animate3 2s linear infinite;
+  }
+
+  @keyframes animate3 {
+    0% {
+      transform: translateX(100%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .scorecard span:nth-child(4) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to top, transparent, #1779ff);
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
+  }
+
+  @keyframes animate4 {
+    0% {
+      transform: translateY(100%);
+    }
+
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    color: black;
+    margin: 0;
+    overflow-y: hidden;
+    position: fixed;
+  }
+
+  .wrap {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  img {
+    display: none;
+  }
+
+  .finalscore {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .invisible {
+    visibility: hidden;
+  }
+
+  .sidebar {
+    position: fixed;
+    left: -400px;
+    ;
+    width: 400px;
+    height: 100%;
+    background: #111111;
+    transition: 0.5s ease;
+  }
+
+  .sidebar header {
+    padding: 10px;
+    line-height: 65px;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    background: #1779ff;
+    user-select: none;
+  }
+
+  .sidebar ol {
+    margin: 0;
+    list-style-type: none;
+  }
+
+  .sidebar a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+    padding-left: 15px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .sidebar a:hover {
+    color: #1779ff;
+    padding-left: 20px;
+    transition: 0.5s;
+  }
+
+  .line {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+  }
+
+  .hamburger {
+    position: fixed;
+    margin: 25px;
+  }
+
+  .scorepanel {
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: white;
+    user-select: none;
+  }
+
+  .scorepanel {
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 1rem;
+    color: white;
+    user-select: none;
+  }
+
+  .scorecard {
+    color: white;
+    background: black;
+    font-family: 'Poppins', sans-serif;
+    padding: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-style: none;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    word-wrap: break-word;
+    width: 50%;
+    overflow: hidden;
+  }
+
+  .scorecard ::before {
+    content: '';
+    background: rgba(255, 255, 255, 0.03);
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    bottom: 2px;
+    width: 50%;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .scorecard .content {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .scorecard .content h1 {
+    color: #1779ff;
+    font-size: 1.5rem;
+    margin: 0;
+    z-index: 2;
+  }
+
+  .scorecard .content h2 {
+    margin-bottom: 0;
+    font-size: 0.7rem;
+  }
+
+  .scorecard .content a {
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    background: #aaaaaa;
+    color: #0c002b;
+    text-decoration: none;
+    opacity: 1;
+  }
+
+  .scorecard .content a:hover {
+    color: #000000;
+    background: white;
+  }
+
+  .scorecard .content p {
+    font-size: 0.6rem;
+    padding: 10px;
+    margin: 0;
+  }
+
+  .scorecard span {
+    transition: 0.5;
+  }
+
+  .scorecard span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, transparent, #1779ff);
+    animation: animate1 2s linear infinite;
+  }
+
+  @keyframes animate1 {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .scorecard span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #1779ff);
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+  }
+
+  @keyframes animate2 {
+    0% {
+      transform: translateY(-100%);
+    }
+
+    100% {
+      transform: translateY(100%);
+    }
+  }
+
+  .scorecard span:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to left, transparent, #1779ff);
+    animation: animate3 2s linear infinite;
+  }
+
+  @keyframes animate3 {
+    0% {
+      transform: translateX(100%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .scorecard span:nth-child(4) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to top, transparent, #1779ff);
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
+  }
+
+  @keyframes animate4 {
+    0% {
+      transform: translateY(100%);
+    }
+
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+}
